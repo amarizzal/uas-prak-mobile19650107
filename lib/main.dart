@@ -28,9 +28,84 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           primaryColor: Colors.white,
-          primarySwatch: null),
-      home: const PageContainer(
-        title: 'ZALORA',
+          primarySwatch: Colors.grey),
+      home: const Base(),
+    );
+  }
+}
+
+class Base extends StatelessWidget {
+  const Base({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text("ZALORA", style: TextStyle(fontWeight: FontWeight.bold))),
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                decoration: new InputDecoration(
+                  hintText: "masukan username anda",
+                  labelText: "Username",
+                  icon: Icon(Icons.people),
+                  border: OutlineInputBorder(
+                      borderRadius: new BorderRadius.circular(5.0)),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                decoration: new InputDecoration(
+                  hintText: "masukan password anda",
+                  labelText: "Password",
+                  icon: Icon(Icons.lock),
+                  border: OutlineInputBorder(
+                      borderRadius: new BorderRadius.circular(5.0)),
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
+            MaterialButton(
+              padding: EdgeInsets.all(14),
+              color: Colors.black,
+              textColor: Colors.white,
+              onPressed: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) {
+                  return PageContainer(
+                    title: 'ZALORA',
+                  );
+                }));
+              },
+              child: Text(
+                "Login",
+                style: TextStyle(fontSize: 17),
+              ),
+            )
+            // TextButton(
+            //     style: TextButton.styleFrom(backgroundColor: Colors.green),
+            //     onPressed: () {
+            //       Navigator.pushReplacement(context,
+            //           MaterialPageRoute(builder: (context) {
+            //         return HomePage();
+            //       }));
+            //     },
+            //     child: Text(
+            //       "Login",
+            //       style: TextStyle(
+            //         color: Color(0xffffffff),
+            //       ),
+            //     ))
+          ],
+        ),
       ),
     );
   }
