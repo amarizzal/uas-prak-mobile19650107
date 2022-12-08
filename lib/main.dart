@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'page/home.dart';
 import 'page/list.dart';
-import 'page/cart.dart';
 import 'page/profil.dart';
 
 void main() {
@@ -171,7 +170,7 @@ class _PageContainerState extends State<PageContainer> {
     });
   }
 
-  List content = [Home(), ListShop(), Cart(), Profil()];
+  List content = [Home(), ListShop(), Friends()];
 
   @override
   Widget build(BuildContext context) {
@@ -209,22 +208,17 @@ class _PageContainerState extends State<PageContainer> {
               label: "List",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart),
-              label: "Cart",
-            ),
-            BottomNavigationBarItem(
               // icon: CircleAvatar(
               //   backgroundImage: NetworkImage(
               //       "https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg"),
               //   radius: 15,
               // ),
               icon: Icon(Icons.people),
-              label: "Profil",
+              label: "Friends",
             ),
           ],
           currentIndex: selectedIndex,
           selectedItemColor: Colors.black,
-          backgroundColor: Colors.green,
           unselectedItemColor: Colors.grey,
           showUnselectedLabels: true,
           showSelectedLabels: true,

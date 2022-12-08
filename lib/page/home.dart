@@ -9,21 +9,36 @@ class Home extends StatelessWidget {
       color: Colors.white,
       padding: EdgeInsets.all(10),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             padding: EdgeInsets.all(10),
             width: 700,
-            height: 100,
+            height: 80,
             decoration: BoxDecoration(
                 color: Colors.black,
                 borderRadius: BorderRadius.all(Radius.circular(10))),
-            child: Text('tes'),
+            child: Row(
+              children: [
+                SizedBox(width: 10),
+                Text(
+                  'Halo Rizal',
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                SizedBox(width: 180),
+                Text(
+                  'Rp. 100.000,-',
+                  style: TextStyle(color: Colors.white, fontSize: 30),
+                ),
+              ],
+            ),
           ),
+          SizedBox(height: 20),
           Text(
             "Choose your style...",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(
+                color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),
           ),
           Text("Kelas C"),
         ],
