@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../model/data_user.dart';
-import '../model/fetch_user.dart';
+import '../viewmodel/fetch_user.dart';
 
 class Friends extends StatelessWidget {
   const Friends({Key? key}) : super(key: key);

@@ -72,7 +72,7 @@ class DetailShoes extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(shoe.name),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
       ),
       body: ListView(
         children: [

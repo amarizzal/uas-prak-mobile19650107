@@ -2,7 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'data_user.dart';
+import '../model/data.dart';
+import '../model/data_user.dart';
 
 Future<List<User>> fetchUser(http.Client client) async {
   final response = await client.get(Uri.parse('https://reqres.in/api/users'));
