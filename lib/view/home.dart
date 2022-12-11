@@ -40,7 +40,102 @@ class Home extends StatelessWidget {
             style: TextStyle(
                 color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),
           ),
-          Text("Kelas C"),
+          Row(
+            children: [
+              InkWell(
+                child: Card(
+                  child: Column(
+                    children: [
+                      Image(
+                        image: AssetImage('images/image1.webp'),
+                        width: 240,
+                        height: 160,
+                        fit: BoxFit.cover,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text('Nike Jordan 1',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          )),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        "Rp. 199.000",
+                        style: TextStyle(
+                            color: Colors.amber[800],
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text("N-123"),
+                    ],
+                  ),
+                ),
+                // onTap: () {
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //       builder: (context) => const DetailShoes(),
+                //       settings: RouteSettings(
+                //         arguments: dataShoes[index],
+                //       ),
+                //     ),
+                //   );
+                // },
+              ),
+              InkWell(
+                child: Card(
+                  child: Column(
+                    children: [
+                      Image(
+                        image: AssetImage('images/image6.webp'),
+                        width: 230,
+                        height: 160,
+                        fit: BoxFit.cover,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text('Nike Jordan 6',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          )),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        "Rp. 199.000",
+                        style: TextStyle(
+                            color: Colors.amber[800],
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text("N-123"),
+                    ],
+                  ),
+                ),
+                // onTap: () {
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //       builder: (context) => const DetailShoes(),
+                //       settings: RouteSettings(
+                //         arguments: dataShoes[index],
+                //       ),
+                //     ),
+                //   );
+                // },
+              )
+            ],
+          )
         ],
       ),
     );

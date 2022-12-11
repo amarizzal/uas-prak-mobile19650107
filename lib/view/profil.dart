@@ -34,6 +34,7 @@ class ListFriends extends StatelessWidget {
           itemBuilder: (context, index) {
             return ListTile(
               title: Text(friends![index].last_name),
+              subtitle: Text(friends![index].email),
               leading: CircleAvatar(
                 child: Image.network(friends![index].avatar),
               ),
